@@ -1,0 +1,33 @@
+@import "../../scss/index";
+
+.Navbar {
+  //height: 70px;
+  background-color: $color4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  box-shadow: 5px 10px 15px $color2;
+  // border-bottom: 1px solid $color5;
+
+  h2 {
+    color: $color1;
+    font-size: 40px;
+    display: flex;
+    //justify-content: space-between;
+    align-items: center;
+  }
+
+  button {
+    background: transparent;
+    border: none;
+    color: $color1;
+    width: 30px;
+    height: 30px;
+
+    * {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
