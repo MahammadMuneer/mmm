@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./LinksContainer.module.scss";
 
+import DocumentTitle from "react-document-title";
 import { Link } from "react-router-dom";
 
 const LinksContainer = () => {
@@ -12,6 +13,7 @@ const LinksContainer = () => {
   ];
   return (
     <main className={styles.LinksContainer}>
+      <DocumentTitle title={"MMM | Home"} />
       <h3>Pages</h3>
 
       {links.map((link) => (
