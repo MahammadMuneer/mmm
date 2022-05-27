@@ -1,0 +1,14 @@
+@import "../../scss/index";
+
+.ScrollToTop {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  height: 40px;
+  width: 40px;
+  font-size: 40px;
+  background: transparent;
+  color: $color3;
+  cursor: pointer;
+  border-radius: 50%;
+}
