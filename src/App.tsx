@@ -1,25 +1,29 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./App.scss";
-import LinksContainer from "./components/LinksContainer";
 import Navbar from "./components/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Page1 } from "./components/Pages/Pages";
-import { Page2 } from "./components/Pages/Pages";
-import { Page3 } from "./components/Pages/Pages";
-import { Page4 } from "./components/Pages/Pages";
+import Hero from "./components/Hero";
+import Projects from "./components/Projects";
+import Info from "./components/Info";
+import Contact from "./components/Contact";
 
 function App() {
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const infoRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<LinksContainer />} />
-          <Route path="/page1" element={<Page1 />} />
-          <Route path="/page2" element={<Page2 />} />
-          <Route path="/page3" element={<Page3 />} />
-          <Route path="/page4" element={<Page4 />} />
-        </Routes>
+        <Navbar
+          projectsRef={projectsRef}
+          infoRef={infoRef}
+          contactRef={contactRef}
+        />
+        <Hero projectsRef={projectsRef} />
+        <Projects scrollRef={projectsRef} />
+        <Info scrollRef={infoRef} />
+        <Contact scrollRef={contactRef} />
       </BrowserRouter>
     </div>
   );

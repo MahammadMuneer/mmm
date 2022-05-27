@@ -1,37 +1,31 @@
 @import "../../scss/index";
 
 .Navbar {
-  //height: 70px;
-  background-color: $color4;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
   padding: 20px 50px;
-  box-shadow: 5px 10px 15px $color2;
-  // border-bottom: 1px solid $color5;
+  z-index: 1;
 
-  h2 {
-    color: $color1;
-    font-size: 40px;
+  .NavLinksContainer {
+    float: right;
     display: flex;
-    //justify-content: space-between;
-    align-items: center;
 
-    img {
-      height: 40px;
-    }
-  }
+    .NavLinks {
+      margin-left: 20px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: $color5;
+      text-transform: capitalize;
+      cursor: pointer;
 
-  button {
-    background: transparent;
-    border: none;
-    color: $color1;
-    width: 30px;
-    height: 30px;
-
-    * {
-      height: 100%;
-      width: 100%;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }
