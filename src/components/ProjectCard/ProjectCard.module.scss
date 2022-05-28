@@ -27,7 +27,7 @@
   }
 
   .Transparent {
-    background-color: #16ade3;
+    background-color: $light-color4;
     opacity: 0.5;
     position: absolute;
     top: 0;
@@ -47,17 +47,13 @@
     opacity: 0;
     transition: opacity 0.3s ease-in-out, visibility 0s ease-in-out;
 
-    // &:hover {
-    //   display: block;
-    // }
-
     a {
       display: flex;
       align-items: center;
       justify-content: center;
       //padding: 0.9rem 0;
       height: 100%;
-      color: $color5;
+      color: $light-color2;
       text-decoration: none;
       font-size: 1.5rem;
       background-color: rgba(40, 44, 53, 0.9);
