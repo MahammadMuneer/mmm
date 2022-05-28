@@ -7,28 +7,27 @@
   width: 100%;
   background: linear-gradient(
     to left,
-    rgba(8, 46, 93, 1),
-    rgba(25, 114, 128, 1),
-    rgba(25, 114, 128, 1),
-    rgba(8, 46, 93, 1)
+    $dark-color1,
+    $light-color3,
+    $light-color3,
+    $dark-color1
   );
-  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 
   .HeroText {
+    // background-color: gainsboro;
+    background-color: $light-color2;
     font-size: 4rem;
     line-height: 4.5rem;
-    //letter-spacing: 2px;
     font-family: "Archivo", sans-serif;
+    color: $dark-color2;
 
     span {
-      color: #ffd6c0;
-      color: #0b0b60;
-      background-color: $color5;
-      opacity: 0.5;
+      color: $dark-color1;
+      background-color: $light-color2;
       border-radius: 5px;
       padding: 0 10px;
       font-family: "Oswald", sans-serif;
