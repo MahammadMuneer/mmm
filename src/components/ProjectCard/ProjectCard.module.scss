@@ -1,0 +1,88 @@
+@import "../../scss/index";
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=BioRhyme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya&display=swap");
+
+.ProjectCard {
+  //box-sizing: content-box;
+  height: 100%;
+  //width: 100%;
+  // background-color: aliceblue;
+  border-radius: 5px;
+  position: relative;
+
+  .ProjectImageContainer {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 5px;
+    }
+  }
+
+  .Transparent {
+    background-color: #16ade3;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+
+  .ProjectLink {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3.5rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0s ease-in-out;
+
+    // &:hover {
+    //   display: block;
+    // }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      //padding: 0.9rem 0;
+      height: 100%;
+      color: $color5;
+      text-decoration: none;
+      font-size: 1.5rem;
+      background-color: rgba(40, 44, 53, 0.9);
+      font-family: "Inter", sans-serif;
+      font-family: "Manrope", sans-serif;
+      font-family: "Bio Rhyme", serif;
+      font-family: "Alegreya", sans-serif;
+
+      span {
+        //   //background: transparent;
+        //   color: #fff;
+        height: 1.5rem;
+        margin-left: 0.6rem;
+      }
+    }
+  }
+
+  &:hover {
+    .ProjectLink {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .Transparent {
+      visibility: hidden;
+    }
+  }
+}
