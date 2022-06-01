@@ -5,14 +5,14 @@ import scrollToSection from "../../functions/scroll";
 
 interface NavbarProps {
   projectsRef: React.RefObject<HTMLDivElement>;
-  infoRef: React.RefObject<HTMLDivElement>;
+  profileRef: React.RefObject<HTMLDivElement>;
   contactRef: React.RefObject<HTMLDivElement>;
 }
 
-const Navbar = ({ projectsRef, infoRef, contactRef }: NavbarProps) => {
+const Navbar = ({ profileRef, projectsRef, contactRef }: NavbarProps) => {
   const navLinks = [
+    { label: "profile", elementRef: profileRef },
     { label: "projects", elementRef: projectsRef },
-    { label: "info", elementRef: infoRef },
     { label: "contact", elementRef: contactRef },
   ];
 

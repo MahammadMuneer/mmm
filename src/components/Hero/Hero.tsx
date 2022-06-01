@@ -4,20 +4,36 @@ import styles from "./Hero.module.scss";
 import scrollToSection from "../../functions/scroll";
 
 interface HeroProps {
-  projectsRef: React.RefObject<HTMLDivElement>;
+  profileRef: React.RefObject<HTMLDivElement>;
 }
 
-const Hero = ({ projectsRef }: HeroProps) => {
+const Hero = ({ profileRef }: HeroProps) => {
   const goToBelowSection = () => {
-    scrollToSection(projectsRef);
+    scrollToSection(profileRef);
   };
+
+  const companyLink = "https://www.robosoftin.com/";
 
   return (
     <div className={styles.Hero}>
       <div className={styles.HeroText}>
-        <p>{texts.HERO_TEXT1}</p>
-        <span>{texts.HERO_TEXT2}</span>
-        <p>{texts.HERO_TEXT3}</p>
+        <div className={styles.TextsContainer} style={{ color: "red" }}>
+          <p>Mahammad Muneer</p>
+          <p>
+            Frontend Developer @{" "}
+            <a href={companyLink}>Robosoft Technologies Pvt Ltd</a>
+          </p>
+        </div>
+        {/* <div className={styles.MediumScreen} style={{ color: "blue" }}>
+          <p>{texts.HERO_TEXT1}</p>
+          <span>{texts.HERO_TEXT2}</span>
+          <p>{texts.HERO_TEXT3}</p>
+        </div>
+        <div className={styles.SmallScreen} style={{ color: "green" }}>
+          <p>{texts.HERO_TEXT1}</p>
+          <span>{texts.HERO_TEXT2}</span>
+          <p>{texts.HERO_TEXT3}</p>
+        </div> */}
       </div>
 
       <img

@@ -1,6 +1,7 @@
 @import "../../scss/index";
 @import url("https://fonts.googleapis.com/css2?family=Archivo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
 
 .Hero {
   height: 100vh;
@@ -18,21 +19,58 @@
   position: relative;
 
   .HeroText {
-    // background-color: gainsboro;
-    background-color: $light-color2;
-    font-size: 4rem;
-    line-height: 4.5rem;
-    font-family: "Archivo", sans-serif;
-    color: $dark-color2;
+    background: $dark-color2;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 90vw;
+    display: flex;
+    align-items: center;
 
-    span {
-      color: $dark-color1;
-      background-color: $light-color2;
-      border-radius: 5px;
-      padding: 0 10px;
+    p:first-child {
+      font-family: "Archivo", sans-serif;
+      font-family: "Kdam Thmor Pro", sans-serif;
+      font-size: 4rem;
+      color: $light-color2;
+      font-weight: 400;
+    }
+    p:last-child {
       font-family: "Oswald", sans-serif;
-      font-weight: 800;
-      letter-spacing: 3px;
+      font-size: 3rem;
+      color: $light-color2;
+
+      a {
+        color: $light-color5;
+        text-overflow: wrap;
+      }
+    }
+
+    @media only screen and (max-width: 1200px) {
+      p:first-child {
+        font-size: 3.5rem;
+      }
+      p:last-child {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media only screen and (max-width: 900px) {
+      p:first-child {
+        font-size: 2.5rem;
+        // margin-bottom: 0.3rem;
+      }
+      p:last-child {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media only screen and (max-width: 550px) {
+      p:first-child {
+        font-size: 1.7rem;
+        // margin-bottom: 0.3rem;
+      }
+      p:last-child {
+        font-size: 1rem;
+      }
     }
   }
 
