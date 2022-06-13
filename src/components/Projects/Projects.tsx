@@ -10,7 +10,7 @@ const Projects = ({ scrollRef }: any) => {
     {
       imageUrl:
         "https://images.unsplash.com/photo-1584931423298-c576fda54bd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-      siteUrl: "",
+      siteUrl: "https://coid19-tracker.vercel.app/",
     },
     {
       imageUrl:
@@ -20,7 +20,7 @@ const Projects = ({ scrollRef }: any) => {
     {
       imageUrl:
         "https://images.pexels.com/photos/7873573/pexels-photo-7873573.jpeg",
-      siteUrl: "",
+      siteUrl: "https://catch-weather.vercel.app/",
     },
     {
       imageUrl:
