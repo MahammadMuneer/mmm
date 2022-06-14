@@ -4,12 +4,12 @@ import styles from "./Hero.module.scss";
 import scrollToSection from "../../functions/scroll";
 
 interface HeroProps {
-  profileRef: React.RefObject<HTMLDivElement>;
+  goBelowRef: React.RefObject<HTMLDivElement>;
 }
 
-const Hero = ({ profileRef }: HeroProps) => {
+const Hero = ({ goBelowRef }: HeroProps) => {
   const goToBelowSection = () => {
-    scrollToSection(profileRef);
+    scrollToSection(goBelowRef);
   };
 
   const companyLink = "https://www.robosoftin.com/";

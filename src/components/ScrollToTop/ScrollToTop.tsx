@@ -1,16 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./ScrollToTop.module.scss";
 
-import { FaArrowAltCircleUp } from "react-icons/fa";
+import { HiArrowCircleDown } from "react-icons/hi";
 
 const ScrollToTop = () => {
-  const scrollToSection = () => {
+  const [hideButton, setHideButton] = useState(true);
+
+  const toggleButtonVisibility = () => {
+    if (window.scrollY > 1) {
+      setHideButton(false);
+    } else {
+      setHideButton(true);
+    }
+  };
+
+  const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", toggleButtonVisibility);
+  }, []);
+
   return (
-    <button onClick={scrollToSection} className={styles.ScrollToTop}>
-      <FaArrowAltCircleUp />
+    <button
+      onClick={scrollToTop}
+      className={`${styles.ScrollToTop} ${hideButton ? styles.HideButton : ""}`}
+    >
+      <HiArrowCircleDown />
     </button>
   );
 };

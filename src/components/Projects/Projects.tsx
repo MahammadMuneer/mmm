@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Projects.module.scss";
-import ScrollToTop from "../ScrollToTop";
 import SectionTitle from "../SectionTitle";
 import GridLayout from "../GridLayout";
 import ProjectCard from "../ProjectCard";
@@ -48,11 +47,11 @@ const Projects = ({ scrollRef }: any) => {
             <ProjectCard
               imageUrl={project.imageUrl}
               siteUrl={project.siteUrl}
+              key={project.imageUrl}
             />
           );
         })}
       </GridLayout>
-      <ScrollToTop />
     </div>
   );
 };
